@@ -1,3 +1,5 @@
+@import 'paleta.css';
+
 * { 
 	padding: 0; 
 	margin: 0; 
@@ -8,7 +10,7 @@
 body { 
 	font-size: 1.2rem;
 	font-family: 'calibri', sans-serif;
-	background: #f1f1f1;
+	background: var(--light-full);
 	transition: .5s ease-in-out;
 }
 
@@ -31,11 +33,15 @@ h1 {
 }
 
 .text-muthed {
-	color: #5E807F;
+	color: var(--muthed);
 }
 
 .text-light {
-	color: #f1f1f1;
+	color: var(--light-full);
+}
+
+.bg-dark {
+	background-color: var(--dark);
 }
 
 .nav {
@@ -43,8 +49,8 @@ h1 {
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px;
-	background-color: #12355B;
-	border-bottom: 3px solid #80727B;
+	background-color: var(--blue);
+	border-bottom: 3px solid var(--marron);
 }
 
 .nav .nav-brend {
@@ -58,14 +64,14 @@ h1 {
 	height: 30px;
 	border-radius:100px;
 	-webkit-appearance:none !important;
-	background: #e6e6e6;
+	background: var(--green);
 	outline: none;
 	transition: .5s ease-in-out;
 	cursor: pointer;
 }
 
 .nav .checked input:checked[type="checkbox"] {
-	background-color: #fff;
+	background-color: var(--light);
 }
 
 .nav .checked input[type="checkbox"]:before {
@@ -73,9 +79,9 @@ h1 {
 	position: absolute;
 	width: 35px;
 	height: 35px;
-	background-color: #585481;
+	background-color: var(--rocho);
 	border-radius: 100px;
-	border:1px solid #fff;
+	border:1px solid var(--light);
 	top:-3px;
 	transition: .5s !important;
 }
@@ -84,45 +90,37 @@ h1 {
 	left:25px;
 }
 
-.list {
+.container .list {
 	transition: .5s ease-in-out;
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.list li {
+.container .list li {
 	width: 300px;
 	margin: 10px;
-	border:2px solid #12355B;
+	border:2px solid var(--blue);
 	border-radius: 5px;
 	position: relative;
 	overflow: hidden;
 }
 
-.list li p:nth-child(1) {
+.container .list li p:nth-child(1) {
 	text-align: center;
 	padding: 10px;
-	background-color: #12355B;
-	color:#f1f1f1;
+	background-color: var(--blue);
+	color:var(--light-full);
 	font-size: 1.5rem;
 	font-weight: bold;
 }
 
-.list li p:nth-child(2) {
+.container .list li p:nth-child(2) {
 	padding: 20px;
 	margin: 10px;
 	background-color: transparent;
 }
 
-
-/*style functions*/
-
-.bg-dark {
-	/*color black = #1B1B1E*/
-	background-color: #000022;
-	
-}
 
 
 
