@@ -1,21 +1,13 @@
+// Importando nossas funçãoes.
+import { $, validChecked, local } from './functions.js';
+
 (function(){
 	"use strict";
-
-	const $ = event => document.querySelector(event);
-
-	const validChecked = () => {
-		
-		if($("#checked").checked){
-			$('body').classList.add("bg-dark");
-			$('.list').classList.add("text-light"); 
-			$('h1').classList.add("text-light");
-		} else {
-			$('body').classList.remove("bg-dark");
-			$('.list').classList.remove("text-light");
-			$('h1').classList.remove("text-light");
-		}
-	}
 	
+	// Adidicionando um evendo a nossa função de temas.
 	$('#checked').addEventListener('click', validChecked);
+
+	// Chamando a função do localStorage.
+	local();
 
 })();
