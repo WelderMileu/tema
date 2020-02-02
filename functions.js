@@ -1,7 +1,10 @@
 // Selectores.
 const $ = event => document.querySelector(event);
 
-// Função para setar o tema.
+/* ==================================================
+			FUNÇÃO PARA SETAR O NOSSO TEMA
+   ================================================= */
+
 // Setando nossos estilos do tema.
 const actived = () => {
 	$('body').classList.add("bg-dark");
@@ -16,10 +19,12 @@ const inactived = () => {
 	$('h1').classList.remove("text-light");
 }
 
+// Validando o nosso checked.
 const validChecked = () => {
 	if($("#checked").checked) {
 		actived();
 		localStorage.setItem('checked', true); // Setando nosso localStorage.
+		localStorage.setItem('create', 'yes');
 	} else {
 		inactived();
 		localStorage.setItem('checked', false); // Setando nosso localStorage.	
@@ -29,15 +34,20 @@ const validChecked = () => {
 // Validando nosso localStorage.
 const local = () => {
 
-	if (localStorage.checked) {
-		if (localStorage.checked) {
+	if (localStorage.create) {
+		if (localStorage.checked === "true") {
 			actived();
+			$("#checked").checked = true;
 		} else {
 			inactived();
+			$("#checked").checked = false;
 		}
 	}
 }
 
 // Exportando nossas variaveis.
 export { validChecked, $, local };
+
+
+
 
