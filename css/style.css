@@ -100,7 +100,6 @@ h1 {
 .container .list li {
 	width: 300px;
 	margin: 10px;
-	border:2px solid var(--blue);
 	border-radius: 5px;
 	position: relative;
 	overflow: hidden;
