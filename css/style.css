@@ -49,21 +49,22 @@ h1 {
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px;
-	background-color: var(--blue);
-	border-bottom: 3px solid var(--marron);
+	/*background-color: var(--blue);*/
+	/*border-bottom: 3px solid var(--marron);*/
 }
 
 .nav .nav-brend {
 	font-weight: bold;
-	font-size: 2.2rem;
+	font-size: 1.5rem;
+	color: var(--muthed);
 }
 
 .nav .checked input[type="checkbox"] {
 	position: relative;
 	width: 60px;
 	height: 30px;
-	border-radius:100px;
-	-webkit-appearance:none !important;
+	border-radius: 100px;
+	-webkit-appearance: none !important;
 	background: var(--green);
 	outline: none;
 	transition: .5s ease-in-out;
@@ -79,7 +80,7 @@ h1 {
 	position: absolute;
 	width: 35px;
 	height: 35px;
-	background-color: var(--rocho);
+	background-color: var(--muthed);
 	border-radius: 100px;
 	border:1px solid var(--light);
 	top:-3px;
@@ -98,7 +99,7 @@ h1 {
 }
 
 .container .list li {
-	width: 300px;
+	width: 100%;
 	margin: 10px;
 	border-radius: 5px;
 	position: relative;
@@ -107,15 +108,28 @@ h1 {
 
 .container .list li p:nth-child(1) {
 	text-align: center;
-	padding: 10px;
-	background-color: var(--blue);
+	padding: 5px;
+	background-color: var(--muthed);
 	color:var(--light-full);
 	font-size: 1.5rem;
 	font-weight: bold;
+	display: flex;
+	justify-content: space-around;
+}
+
+.container .list li p:nth-child(1) i {
+	width: 30px;
+	height: 30px;
+	background-color: var(--light-full);
+	color: var(--muthed);
+	border-radius: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .container .list li p:nth-child(2) {
-	padding: 20px;
+	padding: 10px;
 	margin: 10px;
 	background-color: transparent;
 }
